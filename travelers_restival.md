@@ -4,7 +4,7 @@ title: TRAVELERS RESTIVAL
 permalink: /travelers_restival/
 ---
 
-<img class="center-photo" src="\assets\images\restival.jpg" width="480px" />
+<img class="center-photo" src="{{ site.baseurl }}\assets\images\restival.jpg" width="480px" />
 
 We are excited to announce our 5th annual community-wide Travelers Restival!
 
