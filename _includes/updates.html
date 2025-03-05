@@ -1,0 +1,13 @@
+{% assign file_content = site.pages | where: "path", "updates.md" | first %}
+
+{% if file_content and file_content.content | strip != "" %}
+    <div class="update-frame">
+        <h2>Updates</h2>
+        <div class="update-text">
+        {{ file_content.content | markdownify }}
+        </div>
+    </div>
+{% else %}
+    <!-- No updates found -->
+{% endif %}
+

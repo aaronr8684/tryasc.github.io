@@ -1,0 +1,71 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+body {
+    background-image: url('/assets/images/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
+
+.home, .post {
+    background-color: #ffffff;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.site-header {
+    background-color: #0834b7;
+}
+
+.site-title {
+    font-weight: 500;
+}
+
+.site-header a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-header a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-header a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.update-frame {
+    background-color: #d9edf7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.update-frame h2 {
+    color: #31708f;
+    font-weight: bold;
+    text-align: center;
+}
+
+.update-text {
+    color: #31708f;
+    font-weight: 500;
+    font-size: larger;
+    text-align: center;
+}
+
+
+.center-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.site-footer {
+    background-color: #dddddd;
+}
