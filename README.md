@@ -84,6 +84,7 @@ header_pages:
 ## Advanced Formatting
 
 For additional styling or layout modifications, you may need to edit files in other directories.
+
 ⚠️ **Proceed with caution**—modifying these files incorrectly can break the site’s structure.
 
 ---
