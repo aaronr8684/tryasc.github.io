@@ -1,11 +1,20 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
+.site-nav {
+    background-color: #0834b7;
+}
+
+.site-nav .menu-icon > svg path {
+    fill: #828282;
+}
+
 body {
     background-image: url('#{$baseurl}/assets/images/main-bg.jpg');
+    background-color: #858D37;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-size: 100%;
 }
 
@@ -17,6 +26,8 @@ body {
 
 .site-header {
     background-color: #0834b7;
+    width: 100%;
+    position: fixed;
 }
 
 .site-title {
@@ -36,6 +47,16 @@ body {
 .site-header a:visited {
     color: #ffffff;
     text-decoration: none;
+}
+
+a.page-link:hover {
+    // padding-bottom: 5px;
+    border-bottom: 3px solid #828282;
+}
+
+a.active {
+    // padding-bottom: 15px;
+    border-bottom: 3px solid #dddddd;
 }
 
 .update-frame {
@@ -58,7 +79,6 @@ body {
     text-align: center;
 }
 
-
 .center-photo {
     display: block;
     margin-left: auto;
@@ -68,4 +88,8 @@ body {
 
 .site-footer {
     background-color: #dddddd;
+}
+
+.social-media-list li a {
+    border-radius: 5px;
 }
