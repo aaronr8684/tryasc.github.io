@@ -1,61 +1,91 @@
 # Editing Guide
 
-## Page content
+## Updating Page Content
 
-To edit content for each page/post, just edit the corresponding *.md file. This is 90%+ of what you will be doing
+Most of your updates will involve editing individual **Markdown (`.md`) files**. This covers **90%+** of the changes you'll make.
 
-### Header info
+### Page Header Information
 
-Each page contains header info surrounded by a set of `---`.
+Every page starts with a **YAML front matter section**, enclosed by `---`.
 
-```markdown
+#### Example:
+````markdown
 ---
 layout: page
 title: TITLE TEXT
 header: POST TITLE TEXT
 permalink: /page_url/
 ---
-```
+````
 
-- `layout` - This is the template that will be used.
-- `title` - This is the text that will be used for the link in the website header
-- `header` - OPTIONAL: If present, it will be displayed at the top of the page/post
-- `permalink` - url to use for the page
+#### Header Fields Explained:
+- **`layout`** – Defines which template to use.
+- **`title`** – Appears as the link text in the navigation menu.
+- **`header`** – *(Optional)* Displays a title at the top of the page.
+- **`permalink`** – Sets the page’s URL.
 
-### Content
-The rest of the page can be a mix of text formatted with markdown (preferred) and html (acceptable)
+### Writing Content
 
-For markdown, see [this cheat sheet](https://www.markdownguide.org/cheat-sheet/)
+The body of the page should be written in **Markdown** (preferred) or **HTML** (acceptable).
 
-For HTML, you can reference [W3Schools](https://www.w3schools.com/html/default.asp)
+- **For Markdown formatting**, refer to the [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
+- **For HTML basics**, check out [W3Schools](https://www.w3schools.com/html/default.asp).
 
-## Adding updates for the home page
+---
 
-The `updates.md` file is a special file that adds an update section to the home page. If the file is empty, the update section is hidden. Only the updates themselves should be
-included in the `updates.md`. The `Updates` header is hardcoded in the html.
+## Adding Updates to the Home Page
 
-Unlike the other markdown files for page content, this page should have minimal markdown formatting as it will not be converted correctly into html.
+The `updates.md` file manages the **updates section** on the homepage.
+- If this file is empty, the updates section is **hidden**.
+- Only **updates** should be included—**do not** manually add an "Updates" header (it’s built into the template).
 
-One notable exception is links that can use the `[text](url)` markdown or `<a href="url">text</a>` html formats. External links should always have a `http://` or `https://` prefix.
+### Formatting Notes:
+- Unlike other Markdown pages, `updates.md` **does not fully convert Markdown to HTML**, so **use minimal formatting**.
+- **Links are supported** using either:
+````markdown
+[text](https://example.com)
+````
+or
+````html
+<a href="https://example.com">text</a>
+````
 
-## Editing the navigation
+- External links should **always** include `http://` or `https://`.
 
-Editing the navigation is a little more complicated than adding content. The nav bar always has the order of home first followed by external links and ending with content pages.
+---
 
-### Add markdown file to nav bar (new content)
+## Editing the Navigation
 
-1. __Add the markdown file__ - Before you edit the navigation, make sure you have created the new markdown file (*.md) already. Content is optional at this point
+The navigation menu follows a fixed order:
+1. **Home Page**
+2. **External Links**
+3. **Content Pages**
 
-2. __Add the markdown to the navigation list__ - In the `_config.yml` file, find the `header_pages:` section.
+### Adding a Markdown Page to the Navbar
 
-3. __Add the markdown filename to the list__ - Add the file to the list in the order you want them to show up using the format `- filename.md`
+1. **Create the Markdown File** – Make sure the `.md` file exists before updating navigation.
+2. **Edit `_config.yml`** – Locate the `header_pages:` section.
+3. **Add the Page to the List** – Insert the filename in the correct order:
+````yaml
+header_pages:
+  - filename.md
+````
 
-### Add external link to nav bar
+### Adding an External Link to the Navbar
 
-1. __Open the `static-links.html` file__ - It can be found in the `_includes\` folder.
+1. **Open `static-links.html`** – This file is in the `_includes/` folder.
+2. **Insert the New Link** – Use this format:
+````html
+<a class="page-link" href="URL">NAV TEXT</a>
+````
 
-2. __Add the link__ - Use the format `<a class="page-link" href="url">NAV TEXT</a>`
+---
 
-## Advanced formatting
+## Advanced Formatting
 
-Additional formatting and style changes can be done in the various other folders and files, but this should be considered advanced and can break the dynamic formatting if not done correctly. Proceed with caution.
+For additional styling or layout modifications, you may need to edit files in other directories.
+⚠️ **Proceed with caution**—modifying these files incorrectly can break the site’s structure.
+
+---
+
+This guide should help you update and manage the site’s content. If you have any questions, feel free to reach out! 🚀
