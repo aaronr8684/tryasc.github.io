@@ -29,6 +29,15 @@ For markdown, see [this cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 
 For HTML, you can reference [W3Schools](https://www.w3schools.com/html/default.asp)
 
+## Adding updates for the home page
+
+The `updates.md` file is a special file that adds an update section to the home page. If the file is empty, the update section is hidden. Only the updates themselves should be
+included in the `updates.md`. The `Updates` header is hardcoded in the html.
+
+Unlike the other markdown files for page content, this page should have minimal markdown formatting as it will not be converted correctly into html.
+
+One notable exception is links that can use the `[text](url)` markdown or `<a href="url">text</a>` html formats. External links should always have a `http://` or `https://` prefix.
+
 ## Editing the navigation
 
 Editing the navigation is a little more complicated than adding content. The nav bar always has the order of home first followed by external links and ending with content pages.
